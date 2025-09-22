@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaurav Arora - Cybersecurity Leader</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+        
+        .resume-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .resume-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb, #f5576c);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-top: 10px solid #34495e;
+        }
+        
+        .name {
+            font-size: 2.4em;
+            font-weight: 500;
+            margin-bottom: 12px;
+            color: #fff;
+        }
+        
+        .title {
+            font-size: 1.1em;
+            font-weight: 400;
+            margin-bottom: 25px;
+            opacity: 0.9;
+            color: #e8f4fd;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            font-size: 0.95em;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            opacity: 0.95;
+        }
+        
+        .contact-item i {
+            width: 16px;
+            text-align: center;
+        }
+        
+        .main-content {
+            padding: 50px;
+        }
+        
+        .section {
+            margin-bottom: 45px;
+        }
+        
+        .section-title {
+            font-size: 1.6em;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: #f5576c;
+        }
+        
+        .profile-text {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #555;
+            text-align: justify;
+        }
+        
+        .competencies-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 25px;
+        }
+        
+        .competency-category h3 {
+            font-size: 1.3em;
+            color: #667eea;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .skill-tags {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            align-items: start;
+        }
+        
+        .skill-tag {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 25px;
+            font-size: 0.85em;
+            font-weight: 500;
+            box-shadow: 0 3px 10px rgba(102, 126, 234, 0.3);
+            transition: transform 0.3s ease;
+            text-align: center;
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .skill-tag:hover {
+            transform: translateY(-2px);
+        }
+        
+        .experience-item {
+            margin-bottom: 35px;
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
+            position: relative;
+        }
+        
+        .experience-header {
+            display: flex;
+            justify-content: between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .company-name {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+        
+        .position {
+            font-size: 1.2em;
+            color: #667eea;
+            font-weight: 600;
+            margin: 5px 0;
+        }
+        
+        .location {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        
+        .date-range {
+            background: #667eea;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+            margin-left: auto;
+        }
+        
+        .achievements {
+            list-style: none;
+            margin-top: 15px;
+        }
+        
+        .achievements li {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+            line-height: 1.6;
+            color: #555;
+        }
+        
+        .achievements li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        
+        .education-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        
+        .education-item, .cert-item {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 4px solid #f5576c;
+        }
+        
+        .education-item h3, .cert-item h3 {
+            color: #2c3e50;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+        }
+        
+        .education-item p, .cert-item p {
+            color: #666;
+            font-size: 0.95em;
+        }
+        
+        .cert-id {
+            font-family: 'Courier New', monospace;
+            background: #e9ecef;
+            padding: 4px 8px;
+            border-radius: 5px;
+            font-size: 0.8em;
+            margin-top: 5px;
+            display: inline-block;
+        }
+        
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+        
+        .tech-category {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 12px;
+            border-top: 4px solid #667eea;
+        }
+        
+        .tech-category h3 {
+            color: #2c3e50;
+            font-size: 1.1em;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .tech-list {
+            font-size: 0.95em;
+            color: #555;
+            line-height: 1.8;
+        }
+        
+        .board-positions {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+        
+        .board-positions h3 {
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .board-item {
+            background: rgba(255,255,255,0.1);
+            padding: 12px 18px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .highlight-metric {
+            background: linear-gradient(45deg, #f093fb, #f5576c);
+            color: white;
+            padding: 3px 8px;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 0.9em;
+        }
+        
+        @media (max-width: 768px) {
+            .competencies-grid, .education-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .experience-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .date-range {
+                margin-left: 0;
+                margin-top: 10px;
+                align-self: flex-start;
+            }
+            
+            .name {
+                font-size: 2.5em;
+            }
+            
+            .main-content {
+                padding: 30px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <header class="header">
+            <h1 class="name">Gaurav Arora</h1>
+            <p class="title">Security Engineering Manager • Cloud Security Architect • DevSecOps Specialist</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Bangalore, India</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+91 9XXXXXXXXX</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>gourav.pahuja@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn/in/goa</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <span>github.com/emgaurav</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <section class="section">
+                <h2 class="section-title">Executive Profile</h2>
+                <p class="profile-text">
+                    Senior Security Engineering Manager with <strong>10+ years</strong> of experience designing enterprise security architectures and cloud-native security solutions. Specialized in building scalable <strong>DevSecOps platforms</strong>, running extensive <strong>security automation programs</strong>, and implementing comprehensive <strong>organizational security maturity frameworks</strong>. Proven expertise in establishing high-performing security teams and developing comprehensive security frameworks aligned with business objectives. Expert in translating complex security requirements into automated solutions and scalable processes. Extensive experience in <strong>AI/ML security</strong>, securing machine learning pipelines, and implementing AI-powered security analytics platforms.
+                </p>
+                
+                <div class="board-positions">
+                    <h3><i class="fas fa-users"></i> Industry Contributions & Technical Leadership</h3>
+                    <div class="board-item">
+                        <strong>CFP Review Board Member</strong> - B-Sides Vizag Conference
+                    </div>
+                    <div class="board-item">
+                        <strong>Technical Review Board Member</strong> - OWASP Singapore Chapter
+                    </div>
+                    <div class="board-item">
+                        <strong>Security Program Architect</strong> - Multi-organizational maturity transformation initiatives
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Core Competencies</h2>
+                <div class="competencies-grid">
+                    <div class="competency-category">
+                        <h3><i class="fas fa-cogs"></i> Technical Architecture & Engineering</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Security Team Development</span>
+                            <span class="skill-tag">Enterprise Security Architecture</span>
+                            <span class="skill-tag">Security Strategy & Roadmapping</span>
+                            <span class="skill-tag">Executive Communication</span>
+                            <span class="skill-tag">Security Culture Implementation</span>
+                            <span class="skill-tag">Risk Management Frameworks</span>
+                            <span class="skill-tag">Compliance Automation</span>
+                            <span class="skill-tag">Security Maturity Models</span>
+                        </div>
+                    </div>
+                    <div class="competency-category">
+                        <h3><i class="fas fa-cloud"></i> Cloud Security & AI/ML Security</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">AWS Security Architecture</span>
+                            <span class="skill-tag">GCP Security Controls</span>
+                            <span class="skill-tag">Azure Cloud Security</span>
+                            <span class="skill-tag">DevSecOps Pipeline Integration</span>
+                            <span class="skill-tag">Container & Kubernetes Security</span>
+                            <span class="skill-tag">CI/CD Security Automation</span>
+                            <span class="skill-tag">AI/ML Pipeline Security</span>
+                            <span class="skill-tag">Infrastructure as Code Security</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Professional Experience</h2>
+                
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <div class="company-name">ZEPTO</div>
+                            <div class="position">Security Engineering Manager</div>
+                            <div class="location">Bangalore, India</div>
+                        </div>
+                        <div class="date-range">February 2024 - Present</div>
+                    </div>
+                    <ul class="achievements">
+                        <li>Spearheaded the complete <strong>cybersecurity transformation</strong> for India's fastest-growing quick commerce startup, establishing security-first culture across all business units</li>
+                        <li>Built and established comprehensive security infrastructure, implementing enterprise-grade security strategy aligned with rapid business expansion and <span class="highlight-metric">10x growth targets</span></li>
+                        <li>Architected and deployed <strong>scalable DevSecOps platform</strong> integrating advanced security automation, reducing manual security engineering effort by <span class="highlight-metric">40%</span> while improving security posture</li>
+                        <li>Developed proprietary <strong>cloud-native security automation platform</strong> integrating SCA, SAST, SBOM and secrets scanning, enabling continuous security validation across multi-cloud infrastructure</li>
+                        <li>Reduced inventory scraping by <span class="highlight-metric">95%</span> through implementation of advanced platform engineering solutions, including intelligent WAF automation with dynamic rate limiting and pattern-based detection using Lambda Edge and DynamoDB</li>
+                        <li>Successfully mitigated multiple DDoS attacks with <span class="highlight-metric">zero business impact</span> through robust incident response planning and execution, ensuring 99.9% platform availability</li>
+                        <li>Implemented comprehensive brand protection strategy using XVigil and Izoologic for dark web monitoring and digital risk detection, proactively identifying and mitigating external threats</li>
+                        <li>Designed and deployed <strong>organizational security maturity model</strong>, establishing measurable security metrics and KPIs for continuous program improvement and risk reduction</li>
+                        <li>Implemented security integration across all stages of Secure SDLC, resulting in <span class="highlight-metric">70% reduction</span> in production security incidents</li>
+                        <li>Built and mentored high-performing security team, establishing clear career growth paths and technical specializations to support organizational security objectives</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <div class="company-name">SLICE</div>
+                            <div class="position">Lead Security Engineer</div>
+                            <div class="location">Bangalore, India</div>
+                        </div>
+                        <div class="date-range">April 2022 - January 2024</div>
+                    </div>
+                    <ul class="achievements">
+                        <li>Ran extensive and in-depth <strong>DevSecOps transformation programs</strong> across multiple organizational units, implementing automated security testing, vulnerability management, and security awareness initiatives</li>
+                        <li>Designed and implemented end-to-end Secure SDLC processes, reducing production security incidents by <span class="highlight-metric">75%</span> within 6 months through automated security validation</li>
+                        <li>Orchestrated integration of automated security testing into CI/CD pipelines, enabling <span class="highlight-metric">90%</span> of security issues to be remediated during development phase</li>
+                        <li>Deployed enterprise-grade endpoint security solutions including MDM and XDR, strengthening the organization's security posture against advanced persistent threats</li>
+                        <li>Implemented comprehensive data protection strategy using Forcepoint DLP, preventing sensitive information leakage and ensuring regulatory compliance across all data handling processes</li>
+                        <li>Spearheaded bug bounty program that identified <span class="highlight-metric">45+ vulnerabilities</span> in the first year with average remediation time of 5 days, significantly improving application security</li>
+                        <li>Implemented automated regression testing for security issues, reducing validation time by <span class="highlight-metric">65%</span> and improving engineering team productivity</li>
+                        <li>Led threat modeling initiatives across multiple microservices, enabling security-by-design practices and proactive risk mitigation</li>
+                        <li>Created comprehensive <strong>security awareness program</strong> including CTF events and targeted training for developers, improving security culture and knowledge across the organization</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <div class="company-name">BOUTIQAAT</div>
+                            <div class="position">Information Security Engineer</div>
+                            <div class="location">Gurugram, India</div>
+                        </div>
+                        <div class="date-range">June 2021 - April 2022</div>
+                    </div>
+                    <ul class="achievements">
+                        <li>Executed comprehensive hardening and patching program for cloud and SaaS applications, achieving <span class="highlight-metric">95% compliance</span> with security benchmarks and industry standards</li>
+                        <li>Conducted extensive web and mobile application penetration testing, identifying and remediating critical vulnerabilities before market launch, preventing potential security breaches</li>
+                        <li>Integrated security into DevOps pipeline with GitLab and Jenkins, enabling security testing at every stage of development lifecycle</li>
+                        <li>Deployed and configured SAST and SCA tools including Sonarqube and OWASP Dependency Check, identifying and mitigating over <span class="highlight-metric">200 vulnerabilities</span></li>
+                        <li>Implemented comprehensive security controls for microservices architecture, ensuring data protection across service boundaries and maintaining regulatory compliance</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <div class="company-name">SPICEMONEY</div>
+                            <div class="position">Senior Security Engineer</div>
+                            <div class="location">Mohali, India</div>
+                        </div>
+                        <div class="date-range">March 2017 - June 2021</div>
+                    </div>
+                    <ul class="achievements">
+                        <li>Built security team from ground up, recruiting and mentoring 3 security engineers while establishing comprehensive governance framework for financial services security</li>
+                        <li>Conducted comprehensive penetration testing across diverse financial products including E-commerce, Travel, Prepaid cards, Wallets, and payment systems</li>
+                        <li>Led two successful Secure SDLC implementations, reducing security defects in production by <span class="highlight-metric">65%</span> through systematic security integration</li>
+                        <li>Deployed Drive DLP solution to prevent data exfiltration and protect sensitive financial information across multiple business units</li>
+                        <li>Performed comprehensive security assessments including web, mobile, network, and cloud (AWS) infrastructure, identifying and remediating critical vulnerabilities</li>
+                        <li>Architected security framework for AWS-based payment systems that successfully passed <strong>PCI-DSS certification</strong>, ensuring compliance with financial industry standards</li>
+                        <li>Configured and optimized Akamai Web Application Protector policies, automating change management process through Jira and Ansible integration</li>
+                        <li>Led incident response efforts for critical security events, minimizing business impact through effective containment and remediation strategies</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <div class="company-name">CYBERAON TECHNOLOGIES</div>
+                            <div class="position">Penetration Tester</div>
+                            <div class="location">Vishakhapatnam, Andhra Pradesh, India (Remote)</div>
+                        </div>
+                        <div class="date-range">November 2015 - February 2017</div>
+                    </div>
+                    <ul class="achievements">
+                        <li>Conducted specialized penetration testing of CMS platforms including WordPress, Joomla, and Drupal, identifying numerous zero-day vulnerabilities</li>
+                        <li>Performed comprehensive network penetration testing for enterprise clients, uncovering critical infrastructure weaknesses</li>
+                        <li>Executed black-box penetration testing engagements across various industries, developing customized methodologies for different client environments</li>
+                        <li>Developed and implemented Linux hardening scripts that automated security configuration for client systems</li>
+                        <li>Created detailed technical documentation and remediation guidance, enabling clients to effectively address security gaps</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Education & Certifications</h2>
+                <div class="education-grid">
+                    <div class="education-item">
+                        <h3>Bachelor of Technology</h3>
+                        <p><strong>Computer Science & Engineering</strong></p>
+                        <p>Kurukshetra University, 2010 - 2014</p>
+                    </div>
+                    <div class="cert-item">
+                        <h3>eWPTXv2</h3>
+                        <p>eLearnSecurity Web Application Penetration Tester eXtreme</p>
+                        <div class="cert-id">ID: 7241705</div>
+                    </div>
+                    <div class="cert-item">
+                        <h3>eCPPT</h3>
+                        <p>eLearnSecurity Certified Professional Penetration Tester</p>
+                        <div class="cert-id">ID: 96963437</div>
+                    </div>
+                    <div class="cert-item">
+                        <h3>ITIL4 Foundation</h3>
+                        <p>IT Service Management Foundation</p>
+                        <div class="cert-id">ID: GR671129601G</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Technical Proficiencies</h2>
+                <div class="tech-grid">
+                    <div class="tech-category">
+                        <h3><i class="fas fa-shield-alt"></i> Security Architecture</h3>
+                        <div class="tech-list">
+                            Zero Trust Architecture<br>
+                            Defense-in-Depth Strategy<br>
+                            Microservices Security<br>
+                            API Security Frameworks
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h3><i class="fas fa-cloud"></i> Cloud & Infrastructure</h3>
+                        <div class="tech-list">
+                            AWS, GCP, Azure Security<br>
+                            CSPM (Prisma Cloud, Pingsafe)<br>
+                            Kubernetes & Container Security<br>
+                            Infrastructure as Code Security
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h3><i class="fas fa-code"></i> Application Security</h3>
+                        <div class="tech-list">
+                            SAST/DAST/IAST Implementation<br>
+                            Secure Code Review<br>
+                            Mobile App Security (Android, iOS)<br>
+                            OWASP Top 10 Remediation
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h3><i class="fas fa-cogs"></i> DevSecOps</h3>
+                        <div class="tech-list">
+                            CI/CD Security Integration<br>
+                            Security Automation & Orchestration<br>
+                            Vulnerability Management<br>
+                            Secrets Management
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h3><i class="fas fa-brain"></i> AI/ML Security & Threat Intelligence</h3>
+                        <div class="tech-list">
+                            ML Model Security & Validation<br>
+                            AI Pipeline Security Architecture<br>
+                            Dark Web Monitoring (XVigil, Izoologic)<br>
+                            AI-Powered Threat Detection<br>
+                            ML-Based Security Analytics<br>
+                            Model Poisoning Prevention
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h3><i class="fas fa-server"></i> Security Operations</h3>
+                        <div class="tech-list">
+                            WAF (Cloudflare, Akamai, AWS)<br>
+                            DDoS Mitigation Strategies<br>
+                            MDM & XDR Implementation<br>
+                            DLP Solutions (Forcepoint, Drive)
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h3><i class="fas fa-balance-scale"></i> Compliance & Governance</h3>
+                        <div class="tech-list">
+                            ISO 27001 Implementation<br>
+                            PCI-DSS Compliance<br>
+                            ITGC Controls<br>
+                            Security Metrics & Reporting
+                        </div>
+                    </div>
+                    <div class="tech-category">
+                        <h3><i class="fas fa-tools"></i> Platform Engineering</h3>
+                        <div class="tech-list">
+                            Lambda Edge Development<br>
+                            DynamoDB for Security Analytics<br>
+                            Pattern-Based Detection Systems<br>
+                            Security Automation Frameworks
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
